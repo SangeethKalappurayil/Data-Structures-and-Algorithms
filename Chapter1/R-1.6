@@ -1,0 +1,40 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Sep 21 13:49:50 2018
+
+@author: sangeeth.kalappu
+"""
+
+
+'''
+Python code to find sum of square of all positive odd numbers
+below a user entered number
+
+example: 
+    input = 9
+    output = 1+9+25+49 = 84
+'''
+
+def sum_of_square(list_):
+    '''
+    Function to find sum of sqaures
+    
+    arg list_: list
+    return : sum of sqaures of values in list_
+    '''
+    
+    square_of_list_ = [x**2 for x in list_]
+    sum_of_square = sum(square_of_list_)
+    
+    return sum_of_square
+
+if __name__ == '__main__':
+    print('Enter a positive integer:')
+    num = int(input())
+    
+    '''
+    All the odd numbers upto the user chosen 
+    number is fed into the "sum_of_square" function
+    '''
+    res = sum_of_square(range(1,num,2))
+    print(res)
